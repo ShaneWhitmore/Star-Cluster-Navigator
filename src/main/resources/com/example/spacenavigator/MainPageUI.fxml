@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spacenavigator.MainPageController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@stars background.jpg" />
+         </image>
+      </ImageView>
+      <SplitPane layoutX="405.0" layoutY="75.0" prefHeight="251.0" prefWidth="163.0">
+         <items>
+            <ListView fx:id="imageDetails" prefHeight="200.0" prefWidth="200.0" />
+         </items></SplitPane>
+      <Button fx:id="fileButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#selectImageFromFiles" text="Files">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="rgbImage" fitHeight="251.0" fitWidth="299.0" layoutX="96.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="goButton" layoutX="213.0" layoutY="14.0" mnemonicParsing="false" onAction="#calculateColor" text="Calculate" />
+      <Button fx:id="randomColButton" layoutX="283.0" layoutY="14.0" mnemonicParsing="false" onAction="#randomColourStars" text="Random Colour" />
+      <Slider fx:id="slider" layoutX="67.0" layoutY="75.0" onDragDetected="#defineThreshold" orientation="VERTICAL" prefHeight="251.0" prefWidth="14.0" />
+   </children>
+</Pane>
